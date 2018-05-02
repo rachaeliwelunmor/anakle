@@ -1,0 +1,31 @@
+.row{
+    max-width: $grid-width;
+    margin:0 auto;
+
+    &:not(:last-child){
+        margin-bottom: $vertical-gutter;
+    }
+
+    @include clearfix;
+
+    [class^="col-"]{
+        float: left;
+
+        &:not(:last-child){
+            margin-right: $horizontal-gutter;
+
+            @include mqm(big-phone){
+                margin-right: $horizontal-gutter-small;             
+            }
+        }
+    }
+
+    .col-1-of-3{
+        width: calc((100% - 2*#{$horizontal-gutter})/3); 
+
+        @include mqm(big-phone){
+            width: calc((100% - 2*#{$horizontal-gutter-small})/3);             
+        }
+    }
+
+}

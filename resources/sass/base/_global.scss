@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+html{
+    font-size: 62.5%;
+
+    @include mqm(tab-land){
+        font-size: 56.25%;   //1rem = 9px
+    }
+
+    @include mqm(tab-medium){
+        font-size: 50%;     //1rem = 8px
+    }
+
+    @include mqm(tab-port){
+        font-size: 43.75%;  //1rem = 7px;
+    }
+
+    @include mqm(big-phone){
+        font-size: 37.5%;   //1rem = 6px
+    }
+
+    @include mqm(phone){
+        font-size: 31.25%;   //1rem = 5px
+    }
+
+    @include mqm(big-desktop){
+        font-size: 75%; //1rem = 12px
+    }
+}
+
+body{
+    font-family: Lato, sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: $color_grey-default;
+    padding: 1rem;
+
+    @include mqm(tab-port){
+        padding: 0;
+    }
+}

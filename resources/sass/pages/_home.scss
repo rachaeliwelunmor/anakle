@@ -1,0 +1,71 @@
+.section{
+
+    &__services{
+        padding: 6rem;
+        text-align: center;
+
+        @include mqm(tab-port){
+            padding: 4rem 1rem;
+
+        }
+
+        @include mqm(big-phone){
+            padding: 4rem 2rem;
+        }
+        
+        @include mqm(phone){
+            padding: 4rem 1rem;
+        }
+    }
+
+    &__featuredPosts{
+        padding: 11rem 0;
+        text-align: center;
+        background-color: $color_offWhite;
+        clip-path: polygon(0 100%, 0 20%, 100% 0, 100% 70%);
+        position: relative;
+        z-index: 3;
+
+        @include mqm(big-phone){
+            clip-path: polygon(0 100%, 0 13%, 100% 0, 100% 90%);
+        }
+        
+        @include mqm(phone){
+            padding: 20rem 1rem 5rem;
+            clip-path: polygon(0 100%, 0 10%, 100% 0, 100% 90%);
+        }
+    }
+
+    &__contact{
+        width: 100%;
+        height: 115vh;
+        margin-top: -28rem;
+        position: relative;
+        background: linear-gradient(to right bottom, rgba(38, 208, 206, .85), rgba(26, 41, 128, .85)), url('../images/contactUs-bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        @include mqm(tab-medium){
+            margin-top: -42rem;
+        }
+
+        @include mqm(small-phone){
+            margin-top: -19rem;    
+        }
+        
+    }
+
+    &__footprints{
+        width: 100%;
+        height: 90vh;
+        background-color: $color_offWhite;
+    }
+
+    &__footer{
+        width: 100%;
+        height: 40vh;
+        background-color: $color_grey-dark;
+        color: $color_white;
+    }
+}

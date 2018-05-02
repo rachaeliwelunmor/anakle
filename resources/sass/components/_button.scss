@@ -1,0 +1,42 @@
+.btn{
+    font-size: 1.4rem;
+
+    &-text{
+        text-decoration: none;
+        padding: 1.25rem 0;
+        color: $color-secondary;
+        border-bottom: 1px solid $color-secondary;
+    }
+
+    &-submit{
+        background: $color_secondary;
+        padding: 1rem 4rem;
+        border: 0;
+        border-radius: 36px;
+        margin-left: 45%;
+
+        &:focus{
+            outline: 0;
+        }
+
+        @include mqm(big-phone){
+            margin-left: 70%;
+        }
+
+        @include mqm(phone){
+            margin-left: 60%;
+        }
+    }
+
+    @include mqm(tab-port){
+       font-size: 1.7rem;
+    }
+
+    @include mqm(big-phone){
+        font-size: 2rem;
+    }
+    
+    @include mqm(phone){
+        font-size: 2.2rem;
+    }
+}

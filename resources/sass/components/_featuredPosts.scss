@@ -1,0 +1,93 @@
+.featuredPost {
+    width: 75%;
+    margin: 3rem auto 10rem;
+
+    @include mqm(big-phone){
+        width: 55%;
+    }
+
+    &__col {
+        height: 35rem;
+        width: 33%;
+        margin-right: 3px;
+        margin-bottom: 10rem;
+        float: left;
+        overflow: hidden;
+        box-shadow: 0 .5rem 1rem rgba($color_white, .2);
+        position: relative;
+        transition: all .3s;
+
+        @include mqm(tab-land){
+            width: 32%;       
+        }
+
+        @include mqm(big-phone){
+            width: 100%;
+            box-shadow: none;
+            margin-bottom: 5rem;
+        }
+
+        img{
+            height: 25rem;
+
+            @include mqm(big-phone){
+                width: 52.5rem;
+            }
+            
+            @include mqm(phone){
+                width: 49rem;
+            }
+        }
+        
+        
+        &--1,
+        &--2,
+        &--3{
+            width: 100%;
+            overflow: hidden;
+            background-color: $color_black;
+        }
+
+        &--1,
+        &--2,
+        &--3{
+            position: relative;
+        }
+
+        p{
+            padding: 2rem .5rem;
+            text-align: left;
+            color: $color_grey-medium;
+
+            @include mqm(big-phone){
+                font-size: 2.15rem;
+            }
+
+            @include mqm(phone){
+                font-size: 2.2rem;
+            }
+        }
+
+        .featuredPost__tag{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 0;
+            color: $color-secondary;
+            display: none;
+        }
+
+        &:hover img{
+            opacity: .45;
+        }
+
+        &:hover .featuredPost__tag{
+            display: block;
+            color: $color-secondary;
+        }
+
+        &:hover p{
+            color: $color_primary-dark;
+        }
+    }
+}

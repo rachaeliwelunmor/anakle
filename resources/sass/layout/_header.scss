@@ -1,0 +1,184 @@
+.header{
+    background-image:url("../images/header-bg.png");
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    
+    &__animation {
+        background-image: url("../images/bg-animation.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 20%;
+        left: 60%;
+        width: 42rem;
+        height: 43rem; 
+        @include mqm(tab-land){
+            top: 17%;
+            width: 35rem;
+            height: 36rem;
+        }
+        @include mqm(tab-medium){
+            
+        }
+        @include mqm(tab-port){
+            top: 22%;
+            left: 50%;
+        }
+        @include mqm(big-phone){
+            top: 30%;
+            left: 55%;
+            width: 30rem;
+            height: 32rem;
+            background-size: 100%;
+            opacity: .4;
+        }
+        @include mqm(phone){
+            top: 30%;
+            left: 50%;
+            width: 25rem;
+            height: 28rem;
+            background-size: 100%;
+            opacity: .4;
+        }
+    }
+
+    &__text{
+        color: $color_white;
+        position: absolute;
+        top: 30%;
+        left: 15%;
+        width: 40rem;
+        height: 30rem;
+
+        p{
+            margin: .5rem 0 2rem;
+            font-size: 2rem;
+            font-weight: 200;
+            line-height: 3rem;
+
+            @include mqm(tab-port){
+                font-size: 2.2rem;
+                margin: 1rem 0 2rem;
+            }
+
+            @include mqm(big-phone){
+                font-size: 2.35rem;
+                margin: 1.2rem 0 2.2rem;
+            }
+
+            @include mqm(phone){
+                font-size: 2.75rem;
+                margin: 1.2rem 0 2.2rem;
+            }
+        }
+
+        @include mqm(tab-port){
+            top: 30%;
+            left: 6%;
+        }
+
+        @include mqm(big-phone){
+            top: 30%;
+            left: 6%;
+            width: 33rem;
+            height: 30rem;
+        }
+    }
+
+    &__navigation{
+        width: 120rem;
+        margin: 0 auto;
+        padding: 2.5rem 0;
+
+        .logo{
+            height: 1.5rem;
+            width: auto;
+
+            @include mqm(tab-land){
+                margin-left: 1rem;
+            }
+
+            @include mqm(phone){
+                margin-left: 1rem;
+            }
+        }
+    }
+}
+
+#svg__container{
+    width: 100%;
+    height: 25.5rem;
+    position: absolute;
+    bottom: 0;
+
+    @include mqm(tab-land){
+        bottom: -3.1rem;
+    }
+
+    @include mqm(tab-port){
+        bottom: -3.8rem;
+    }
+
+    @include mqm(big-phone){
+        bottom: -5.45rem;
+    }
+    
+    @include mqm(phone){
+        bottom: -7.5rem;
+    }
+
+    @include mqm(small-phone){
+        bottom: -8.6rem;
+    }
+}
+
+.navigation{
+    display: block;
+    float: right;
+
+    &__list{
+        display: inline-block;
+        list-style: none;
+
+        &:not(:last-child){
+            margin-right: 1rem;
+        }
+    }
+
+    &__link{
+        &:link,
+        &:visited{
+            color: $color_white;
+            display: inline-block;
+            text-decoration: none;
+            padding: 0 1rem;
+            backface-visibility: hidden;
+            font-size: 1.6rem;
+            transition: all .4s;
+
+            @include mqm(tab-medium){
+                font-size: 2rem;
+            }
+        }
+
+        &:hover{
+            transform: translateY(-0.5rem) skewX(10deg);
+            color: $color-secondary;
+        }
+    }
+
+    @include mqm(tab-medium){
+        display: inline-block;
+        float: none;
+        position: absolute;
+        right: 0;
+    }
+
+    @include mqm(big-phone){
+        display: none;
+    }
+}

@@ -1,0 +1,44 @@
+.heading{
+
+    &--main{
+        font-size: 6.5rem;
+        letter-spacing: 1rem;
+        font-weight: 500;
+        text-transform: uppercase;
+
+        @include mqm(phone){
+            font-size: 4.5rem;
+            letter-spacing: .5rem;
+        }
+    }
+
+    &--secondary{
+        font-size: 2.5rem;
+        display: inline-block;
+        letter-spacing: 1px;
+        color: $color_primary-dark;
+        transition: transform .4s;
+    }
+
+    &--tertiary{
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        color: $color_white;
+
+        @include mqm(big-phone){
+            font-size: 2rem;            
+        }
+    }
+
+    &--container{
+        text-align: center;
+
+        &:hover {
+
+            cursor: pointer;
+            .heading--secondary{
+                transform: rotate(-10deg)scale(1.35);
+            }
+        }
+    }
+}

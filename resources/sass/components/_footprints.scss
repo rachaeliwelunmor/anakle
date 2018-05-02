@@ -1,0 +1,113 @@
+.footprint{
+
+    @include mqm(big-phone){
+        text-align: center;  
+    }
+ 
+    &__container{
+        display: inline-block;
+        width: 12%;
+        height: 18%;
+        position: relative;
+        box-shadow: 0rem 1rem 2rem rgba($color_black, .05);
+        border-radius: 75px;
+        margin: 5rem 0 3rem 5rem;
+        transition: all .3s;
+
+        &--2{
+            overflow: hidden;
+            .footprint__container{
+                margin: 5rem 0 3rem 8rem;
+
+                @include mqm(tab-medium){
+                    margin: 2rem 4rem;
+                }
+
+                @include mqm(tab-port){
+                    margin: 2rem;
+                }
+                
+                @include mqm(big-phone){
+                    margin: 2rem 1rem;
+                }
+
+                @include mqm(phone){
+                    margin: 1rem .5rem;
+                }
+            }
+            
+            @include mqm(tab-port){
+               display: inline; 
+            }
+        }
+
+        &:hover{
+            cursor: pointer;
+            transform: translateY(-1.25rem);
+            box-shadow: 0rem .2rem 2rem rgba($color_black, .1);
+        }
+
+        @include mqm(tab-medium){
+            margin: 2rem;
+        }
+
+        @include mqm(tab-port){
+            width: 15%;
+            margin: 1rem .5rem;
+        }
+
+        @include mqm(big-phone){
+            width: 30%;
+            height: 15%; 
+            margin: 1rem .5rem;
+            border-radius: 3px; 
+        }
+    }
+
+    &__image{
+        width: 15rem;
+        position: absolute;
+        top: 10%;
+
+        @include mqm(tab-medium){
+            width: 12rem;
+        }
+
+        @include mqm(tab-port){
+            width: 12rem;
+            left: 1rem;
+            top: 3rem;
+        }        
+
+        @include mqm(big-phone){
+            width: 12rem;  
+            top: 20%;
+            left: 22%;  
+        }
+
+        @include mqm(phone){
+            width: 12rem;  
+            top: 20%;
+            left: 0;  
+        }
+        
+        &--1{
+            width: 7rem;
+            left: 27%;
+
+            @include mqm(phone){
+                width: 8rem;
+            }
+        }
+
+        &--2{
+            left: 5%;
+
+            @include mqm(big-phone){
+                left: 22%;
+            }
+        }
+
+
+    }
+}

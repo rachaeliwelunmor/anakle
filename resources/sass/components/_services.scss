@@ -1,0 +1,188 @@
+.services{
+
+    &__pitch{
+        width: 67%;
+        font-size: 1.6rem;
+        line-height: 2.5rem;
+        margin: 0 auto;
+
+        @include mqm(tab-port){
+            width: 80%;
+            font-size: 1.78rem;
+        }
+
+        @include mqm(big-phone){
+            width: 95%;
+            line-height: 3rem;
+            font-size: 2.2rem;
+        }
+
+        @include mqm(phone){
+            width: 95%;
+            line-height: 3rem;
+            font-size: 2.2rem;
+        }
+        
+    }
+
+    &__box{
+        margin: 3rem 0;
+        padding: 3rem 0;
+        width: 120rem;
+
+        &--container{
+            width: 45%;
+            padding: 1rem;
+            
+
+
+            img{
+                width: 14%;
+                height: 10%;
+                border-radius: 50%;
+                float: left;
+                padding: 0 1rem;
+
+                @include mqm(tab-port){
+                    width: 15%;
+                    height: 7%;
+                    margin-top: 1rem;
+                }
+
+                @include mqm(big-phone){
+                    width: 12%;
+                    height: 7%;
+                    margin-top: 1rem;
+                }
+
+                @include mqm(phone){
+                    width: 15%;
+                    height: 7%;
+                    margin-top: 1rem;
+                }
+
+                @include mqm(small-phone){
+                    margin-top: 3rem;
+                }
+                    
+            }
+
+            h4{
+                font-size: 1.6rem;
+                color: $color_grey-medium;
+            }
+
+            p,h4{
+                width: 80%;
+                font-size: 1.4rem;
+                line-height: 2rem;
+                text-align: left;
+
+                @include mqm(tab-port){
+                    font-size: 1.7rem;
+                }
+
+                @include mqm(big-phone){
+                    display: inline-block;
+                    line-height: 2.5rem;
+                    font-size: 2.2rem;
+                }
+                
+                @include mqm(phone){
+                    display: inline-block;
+                    line-height: 2.5rem;
+                    font-size: 2.2rem;
+                }
+                
+            }
+
+           
+
+            &-1,
+            &-3,
+            &-5{
+                margin: 2rem 0  2rem 7rem ;
+                transition: transform .5s;
+
+                &:hover{
+                    transform: translateX(10rem);
+                    cursor: pointer;
+
+                    @include mqm(big-phone){
+                        transform: translateX(2rem);
+                    }
+                    
+                    @include mqm(phone){
+                        transform: translateX(1rem);
+                    }
+                }
+
+                @include mqm(tab-port){
+                    margin: 3.5rem 0 4.5rem;
+                }
+
+                @include mqm(big-phone){
+                    margin: 3rem 0 4rem;
+                }
+                
+                @include mqm(phone){
+                    margin: 2rem 0 3rem;
+                }
+                
+            }
+
+            &-2,
+            &-4,
+            &-6{
+                margin: 2rem 0  2rem 62rem ;
+                transition: transform .5s;
+
+                &:hover{
+                    transform: translateX(-10rem);
+                    cursor: pointer;
+
+                    @include mqm(big-phone){
+                        transform: translateX(-2rem);
+                    }
+                    
+                    @include mqm(phone){
+                        transform: translateX(-1rem);
+                    }
+                }
+                
+                @include mqm(tab-medium){
+                    margin: 2rem 0 2rem 50rem;
+                }
+                @include mqm(tab-port){
+                   margin: 3.5rem 0 4.5rem 47rem;
+                }
+
+                @media (max-width: 47.81em) {
+                    margin: 3.5rem 0 4.5rem 35rem;
+                }
+
+                @include mqm(big-phone){
+                    margin: 3rem 0 4rem;
+                }
+
+                @include mqm(phone){
+                    margin: 2rem 0 3rem;
+                }
+            }
+
+            @include mqm(tab-port){
+                width: 60%;    
+            }
+
+            @include mqm(big-phone){
+                width: 100%;
+            }
+        }
+
+        @include mqm(tab-port){
+            width: 100%;
+            padding: 0 5rem;
+        }
+        
+    }
+}

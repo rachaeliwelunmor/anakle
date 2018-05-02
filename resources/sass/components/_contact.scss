@@ -1,0 +1,175 @@
+.contact {
+    width: 70%;
+    height: 60%;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -51%);
+
+    @include mqm(phone){
+        width: 90%;  
+        top: 60%;  
+    }
+    &__side {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -51%);
+        height: 100%;
+        width: 100%;
+        backface-visibility: hidden;
+    }
+    &__front {
+        perspective: 150rem;
+        transition: all .8s;
+        &--content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -51%);
+            color: $color_white;
+            h4 {
+                text-transform: uppercase;
+                font-size: 12rem;
+                font-weight: 200;
+                letter-spacing: 1px;
+            }
+            p {
+                font-size: 4rem;
+                font-weight: 100;
+            }
+        }
+    }
+    &__back {
+        top: 0;
+        left: 0;
+        background: transparent;
+        overflow: hidden;
+        transform: rotateY(180deg);
+        transition: all .8s;
+        .contact__form {
+            width: 70%;
+            margin: 8% auto 0;
+            overflow: hidden;
+
+            @include mqm(tab-land){
+                margin: 2% auto 0;   
+            }
+
+            @include mqm(tab-medium){
+                margin: 9% auto 0;   
+            }
+
+            @include mqm(big-phone){
+                width: 100%;    
+            }
+
+            @include mqm(phone){
+                width: 90%;    
+            }
+            &--label {
+                padding: 0 1rem;
+                display: block;
+                width: 80%;
+                color: $color-secondary;
+                font-family: inherit;
+                font-size: inherit;
+                margin-bottom: 2rem;
+                transition: all .2s cubic-bezier(0.075, 0.82, 0.165, 1);
+                
+                @include mqm(big-phone){
+                    font-size: 2.2rem;  
+                }
+            }
+            
+            &--input,
+            &--textarea {
+                width: 100%;
+                border-radius: 10px;
+                vertical-align: top;
+                font-family: inherit;
+                font-size: inherit;
+                border: 0;
+                margin-bottom: 1rem;
+
+                @include mqm(tab-port){ 
+                    font-size: 2rem;
+                }
+
+                @include mqm(phone){ 
+                    font-size: 2.2rem;
+                }
+            }
+
+            &--input {
+                height: 4rem;
+                padding: 0 .8rem;
+
+                @include mqm(tab-port){
+                    padding: 3rem .8rem;
+                    border-radius: 30px;   
+                }
+
+                @include mqm(big-phone){
+                    padding: 3rem .8rem;
+                    border-radius: 30px;
+                }
+
+                @include mqm(phone){
+                    padding: 2.5rem .8rem;
+                    border-radius: 30px;
+                }
+            }
+            &--textarea {
+                height: 13rem;
+                padding: 1rem .8rem;
+                resize: none;
+
+                @include mqm(big-phone){
+                    height: 16rem;
+                }
+            }
+
+            &--label:focus,
+            &--input:focus,
+            &--textarea:focus {
+                outline: 0;
+                box-shadow: 0 1rem 5rem rgba($color_black, .3);
+            }            
+            ::-webkit-input-placeholder {
+                color: $color_grey-medium;
+            }
+            :-moz-placeholder {
+                color: $color_grey-medium;
+            }
+            :-ms-input-placeholder {
+                color: $color_grey-medium;
+            }
+        }
+    }
+    &:hover .contact__front {
+        transform: rotateY(-180deg);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    &:hover .contact__back {
+        transform: rotateY(0);
+    }
+}
+
+.contact__form--input:placeholder-shown+.contact__form--label,
+.contact__form--textarea:placeholder-shown+.contact__form--label {
+    transform: translateY(-3rem);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.form__group{
+    width: 80%;
+    margin: 0 auto;
+
+    @include mqm(tab-port){
+        width: 100%;
+    }
+}

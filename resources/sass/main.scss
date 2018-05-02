@@ -1,0 +1,54 @@
+@import "abstracts/_mixins.scss";
+
+@import "abstracts/_variables.scss";
+
+@import "abstracts/_utilities.scss";
+
+
+@import "base/_global.scss";
+
+@import "layout/_header.scss";
+
+@import "layout/_footer.scss";
+
+@import "pages/_home.scss";
+
+@import "components/_contact.scss";
+
+@import "components/_grid.scss";
+
+@import "components/_typography.scss";
+
+@import "components/_services.scss";
+
+@import "components/_button.scss";
+
+@import "components/_featuredPosts.scss";
+
+@import "components/_footprints.scss";
+
+
+
+// @include mqm(tab-land){
+            
+// }
+
+// @include mqm(tab-medium){
+    
+// }
+
+// @include mqm(tab-port){
+    
+// }
+
+// @include mqm(big-phone){
+    
+// }
+
+// @include mqm(phone){
+    
+// }
+
+// @include mqm(small-phone){
+    
+// }

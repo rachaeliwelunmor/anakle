@@ -1,0 +1,14 @@
+.u-{
+
+    &padding--big{
+        padding: 5rem;
+
+        @include mqm(phone){
+            padding: 4rem 1.5rem;
+        }
+    }
+
+    &margin__bottom--small{
+        margin-bottom: 1.5rem;
+    }
+}

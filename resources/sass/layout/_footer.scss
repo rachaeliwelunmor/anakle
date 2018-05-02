@@ -1,0 +1,65 @@
+.footer{
+
+    padding: 5rem 10rem;
+    text-align: center;
+
+    &__address{
+
+        p{
+            @include mqm(big-phone){
+                font-size: 1.8rem;          
+            }
+
+            i{
+                @include mqm(big-phone){
+                    font-size: 3rem;        
+                }
+            }
+        }
+        
+        &--mail{
+            vertical-align: middle;
+            font-size: 2rem;
+            margin-right: .7rem;
+        }
+    }
+
+    &__services{
+
+        ul{
+            li{
+                margin-bottom: 1.5rem;
+
+                @include mqm(big-phone){
+                    font-size: 1.8rem;       
+                }
+            }
+        }
+    }
+
+    &__social{
+        margin-top: 1.5rem;
+        i{
+            font-size: 3rem;
+            margin: 1rem;
+            
+            @include mqm(big-phone){
+                font-size: 2.5rem;        
+            }
+        }
+    }
+
+    &__blog{
+        @include mqm(big-phone){
+            font-size: 1.8rem;
+        }
+    }
+
+    @include mqm(big-phone){
+        padding: 3rem;  
+    }
+
+    @include mqm(phone){
+        padding: 2rem 1rem;  
+    }
+}
